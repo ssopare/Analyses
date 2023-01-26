@@ -1,0 +1,830 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
+
+<div class="container">
+
+<table class="table table-striped" >
+    
+    {% comment %} <thead>
+        <th>Name</th>
+        <th>Gender</th>
+        <th>School</th>
+    </thead>
+    {% for student in students %}
+    <tbody>
+        <tr>
+            <td>{{student.name}}</td>
+            <td>{{student.gender}}</td>
+            <td>{{student.school}}</td>
+        </tr>
+    </tbody>    
+    {% endfor %} {% endcomment %}
+
+     <thead>
+        <th>Student {{checkGrade.student.name}}</th>
+        <th>Subject</th>
+        <th>Grade</th>
+        <th>Grade Value</th>
+    </thead>
+    {% for check in checkGrade %}
+    <tbody>
+        <tr>
+            {% comment %} <td>{{check.student.id}}</td> {% endcomment %}
+            <td>{{check.student.name}}</td>
+            <td>{{check.subject.name}}</td>
+            <td>{{check.grade.grade}}</td>
+            <td>{{check.grade.value}}</td>
+        </tr>
+    </tbody>    
+    {% endfor %} 
+
+
+</table>
+
+<div>
+  <h1>I however want the above output to be something like this.</h1> 
+
+  <table class="table table-striped" >
+    
+   <B> <DIV>
+      St. Joseph Seminary SHS, MAMPONG ASHANTI, 
+    </DIV>
+    <DIV>
+      2022 WASSCE RESULTS 
+    </DIV>
+    <DIV>
+      NAME: SIMON OPARE
+    </DIV>
+    <DIV>
+      INDEX NUMBER: 0050501001
+    </DIV></B>
+
+     <thead>
+        
+        <th>Subject</th>
+        <th>Grade</th>
+        
+    </thead>
+        <tr>          
+            <td>English</td>
+            <td>F9</td>
+            
+        </tr>
+        <tr>
+           <td>Mathematics</td>
+            <td>C6</td>
+            
+       
+          <tr>
+           <td>Integrated Science</td>
+            <td>B3</td>
+            
+        </tr>
+   
+        <tr>
+             <td>Social Studies</td>
+            <td>C6</td>
+            
+        </tr>
+         </tr>
+            <td>I C T</td>
+            <td>A1</td>
+            
+        </tr>
+         </tr>
+            <td>Chemistry</td>
+            <td>B2</td>
+            
+        </tr>
+         </tr>
+            <td>Physics</td>
+            <td>B3</td>
+            
+        </tr>
+         </tr>
+            <td>Elective Mathematics</td>
+            <td>C4</td>
+            
+        </tr>
+         </tr>
+            <td><B>AGGREGATE</B></td>
+           <td><B>24</B></td> 
+            
+        </tr>
+
+        </TAble>
+
+        <TABLE>
+           <table class="table table-striped" >
+    
+   <B> <DIV>
+      St. Joseph Seminary SHS, MAMPONG ASHANTI, 
+    </DIV>
+    <DIV>
+      2022 WASSCE RESULTS 
+    </DIV>
+    <DIV>
+      NAME: AIKINS OWUSU
+    </DIV>
+    <DIV>
+      INDEX NUMBER: 0050501002
+    </DIV></B>
+
+     <thead>
+        
+        <th>Subject</th>
+        <th>Grade</th>
+        
+    </thead>
+        <tr>          
+            <td>English</td>
+            <td>A1</td>
+            
+        </tr>
+        <tr>
+           <td>Mathematics</td>
+            <td>F9</td>
+            
+       
+          <tr>
+           <td>Integrated Science</td>
+            <td>F9</td>
+            
+        </tr>
+   
+        <tr>
+             <td>Social Studies</td>
+            <td>A2</td>
+            
+        </tr>
+         </tr>
+            <td>I C T</td>
+            <td>A1</td>
+            
+        </tr>
+         </tr>
+            <td>Chemistry</td>
+            <td>B2</td>
+            
+        </tr>
+         </tr>
+            <td>Physics</td>
+            <td>B3</td>
+            
+        </tr>
+         </tr>
+            <td>Elective Mathematics</td>
+            <td>C4</td>
+            
+        </tr>
+         </tr>
+            <td><B>AGGREGATE</B></td>
+           <td><B>18</B></td> 
+            
+        </tr>
+        </TABLE>
+</div>
+<DIV>
+  <H1>NB: AGGREGATE IS CALCULATED ON 3 BEST ELECTIVES AND 3 CORES, INCLUDING Mathematics, English, and either Science or Social depending on which is best</H1>
+</DIV>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<DIV>
+  <H1>This is another static Table</H1>
+</DIV>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" colspan = "2"></th>
+      <th scope="col" colspan = "2">Total No. Can'cld</th>
+      <th scope="col" colspan = "2">Total No. Absent</th>
+      <th scope="col" colspan = "2">Total No. W'held</th>
+      <th scope="col" colspan = "2"><center> A1</center></th>
+      <th scope="col" colspan = "2"><center>B2</center> </th>
+      <th scope="col" colspan = "2"><center>B3</center></th>
+      <th scope="col" colspan = "2"><center>C4</center></th>
+      <th scope="col" colspan = "2"><center>C5</center></th>
+      <th scope="col" colspan = "2"><center>C6</center></th>
+      <th scope="col" colspan = "2"><center>D7</center></th>
+      <th scope="col" colspan = "2"><center>E8</center></th>
+      <th scope="col" colspan = "2"><center>F9</center></th>
+      <th scope="col" ><center>% Passed A1-C6</center></th>
+      <th scope="col" ><center>% Passed A1-E8</center></th>
+      
+    </tr>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">English Language</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>12</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Mathematics</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Integrated Science</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Social Studies</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+     <th scope="row">Accounting</th>
+      <td><b>50</b></td>
+      <td><b>29</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Biology</th>
+      <td><b>40</b></td>
+      <td><b>20</b></td>
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Chemistry</th>
+     <td><b>40</b></td>
+      <td><b>20</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Other Electives</th>
+      <td><b>50</b></td>
+      <td><b>31</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>12</td>
+      <td>3</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+  </tbody>
+</table>
+  
+<h1>THIS IS WHAT I HAVE TRIED SO FAR (ITS ONLY THE ROLE HEADING GRADE THAT IS DYNAMIC)</h1>
+
+</table>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col" colspan = "2"></th>
+      {% for grade in grade %}
+      <th scope="col" colspan = "2">{{grade.grade__grade}}</th>
+      {% comment %} <th scope="col" colspan = "2">Total No. Absent</th>
+      <th scope="col" colspan = "2">Total No. W'held</th>
+      <th scope="col" colspan = "2"><center> A1</center></th>
+      <th scope="col" colspan = "2"><center>B2</center> </th>
+      <th scope="col" colspan = "2"><center>B3</center></th>
+      <th scope="col" colspan = "2"><center>C4</center></th>
+      <th scope="col" colspan = "2"><center>C5</center></th>
+      <th scope="col" colspan = "2"><center>C6</center></th>
+      <th scope="col" colspan = "2"><center>D7</center></th>
+      <th scope="col" colspan = "2"><center>E8</center></th>
+      <th scope="col" colspan = "2"><center>F9</center></th> {% endcomment %}
+      {% endfor %}
+      <th scope="col" ><center>% Passed A1-C6</center></th>
+      <th scope="col" ><center>% Passed A1-E8</center></th>
+      
+    </tr>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col">M</th>
+      <th scope="col">F</th>
+      <th scope="col"> </th>
+      <th scope="col"> </th>
+    </tr>
+
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">English Language</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>12</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Mathematics</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Integrated Science</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Social Studies</th>
+      <td><b>69</b></td>
+      <td><b>51</b></td>
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+     <th scope="row">Accounting</th>
+      <td><b>50</b></td>
+      <td><b>29</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>3</td>
+      <td>0</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Biology</th>
+      <td><b>40</b></td>
+      <td><b>20</b></td>
+      <td>12</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Chemistry</th>
+     <td><b>40</b></td>
+      <td><b>20</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>0</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+    <tr>
+      <th scope="row">Other Electives</th>
+      <td><b>50</b></td>
+      <td><b>31</b></td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>3</td>
+      <td>0</td>
+      <td>12</td>
+      <td>3</td>
+      <td>4</td>
+       <td>3</td>
+      <td>0</td>
+      <td>3</td>
+      <td>0</td>
+       <td>3</td>
+      <td>4</td>
+      <td>7</td>
+      <td>12</td>
+      <td>3</td>
+       <td>0</td>
+       <td>0</td>
+      <td>12</td>
+      <td>12</td>
+      <td>3</td>
+      <td>7</td>
+      <td><b>50%</b></td>
+      <td><b>60%</b></td>
+    </tr>
+  </tbody>
+</table>
+
+<div>
+  <b>{{studentAggregate.grades.name}}{{student.student.name}}, {{students.name}}</b>
+  {% for student in studentAggregate %}
+     <br>
+    {{student.student.name}}, {{student.subject.name}}, {{student.grade.grade}} <br>
+    {% comment %} {% for student in studentAggregate %}
+      {{student.subject}} <br>
+    {% endfor %} {% endcomment %}
+  {% endfor %}
+</div>
+
+</div>
